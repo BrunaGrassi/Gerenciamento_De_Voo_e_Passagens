@@ -10,7 +10,11 @@ public class Voo {
     }
 
     public void reservarAssento() {
-        assentosOcupados++;
+
+        if (assentosOcupados < totalAssentos){
+            assentosOcupados++;
+        }
+        
     }
 
     public int getAssentosDisponiveis() {
