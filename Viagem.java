@@ -3,7 +3,9 @@ public class Viagem {
     public static void main(String[] args) {
         
         CompanhiaAerea companhiaAerea = new CompanhiaAerea("Companhia ABC");
-        Voo voo = new Voo("1234", 20, "Aeroporto A", "Aeroporto B");
+        Aeroporto aeroportoOrigem = new Aeroporto("Aeroporto X", "Brasília");
+        Aeroporto aeroportoDestino = new Aeroporto("Aeroporto Y", "São Paulo");
+        Voo voo = new Voo("1234", 20, aeroportoOrigem, aeroportoDestino);
         Passagem passagem = new Passagem(voo, "Bruna", 150.5, 49.5);
 
         companhiaAerea.adicionarVoo(voo);
@@ -15,8 +17,8 @@ public class Viagem {
         voo.reservarAssento();
         System.out.println("Assentos disponíveis: " + voo.getAssentosDisponiveis());
         System.out.println("Valor total da passagem: " + passagem.calcularPrecoTotal());
-        System.out.println("Aeroporto de Origem: " + voo.getAeroportoOrigem());
-        System.out.println("Aeroporto de Destino: " + voo.getAeroportoDestino());
+        System.out.println("Aeroporto de origem: " + voo.getAeroportoOrigem());
+        System.out.println("Aeroporto de destino: " + voo.getAeroportoDestino());
 
     }
 

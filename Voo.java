@@ -2,10 +2,10 @@ public class Voo {
     private String codigo;
     private int totalAssentos;
     private int assentosOcupados;
-    private String aeroportoOrigem;
-    private String aeroportoDestino;
+    private Aeroporto aeroportoOrigem;
+    private Aeroporto aeroportoDestino;
 
-    public Voo(String codigo, int totalAssentos, String aeroportoOrigem, String aeroportoDestino) {
+    public Voo(String codigo, int totalAssentos, Aeroporto aeroportoOrigem, Aeroporto aeroportoDestino) {
         this.codigo = codigo;
         this.totalAssentos = totalAssentos;
         this.assentosOcupados = 0;
@@ -33,11 +33,11 @@ public class Voo {
     }
 
     public String getAeroportoOrigem() {
-        return aeroportoOrigem;
+        return aeroportoOrigem.getNomeAeroporto();
     }
 
     public String getAeroportoDestino() {
-        return aeroportoDestino;
+        return aeroportoDestino.getNomeAeroporto();
     }
 
     //criada só pra teste, excluir depois
