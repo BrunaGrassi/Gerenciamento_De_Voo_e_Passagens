@@ -13,6 +13,9 @@ public class Voo {
 
         if (assentosOcupados < totalAssentos){
             assentosOcupados++;
+            System.out.println("Assento reservado!");
+        } else {
+            System.out.println("Não existem assentos livres.");
         }
         
     }
